@@ -13,7 +13,11 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem "simplecov", require: false, group: :test
+group :test do
+  gem "simplecov", require: false
+  gem "rails", "~>7.1", require: false
+end
+
 
 group :development do
   gem "bundler"
