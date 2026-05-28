@@ -4,6 +4,8 @@ pkg/
 test/tmp/
 test/dummy/db/*.sqlite3
 test/dummy/db/*.sqlite3-journal
+test/dummy/db/*.sqlite3-shm
+test/dummy/db/*.sqlite3-wal
 test/dummy/log/*.log
 test/dummy/tmp/
 test/dummy/.sass-cache
