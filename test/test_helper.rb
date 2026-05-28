@@ -24,6 +24,11 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActiveSupport::TestCase.fixtures :all
 end
 
+[ActionController::TestCase, ActionDispatch::IntegrationTest].each do |klass|
+  klass.fixture_paths = [File.expand_path("../fixtures", __FILE__)]
+  klass.fixtures :all
+end
+
 module Knock
   class MyCustomException < StandardError
   end
